@@ -12,7 +12,7 @@ def descriptografar_arquivo(arquivo, chave):  # Cria um objeto de cifra/decifra√
     with open(arquivo, "wb") as file:
         file.write(dados_descriptografados)
 
-def encontrar_arquivos(diretorio):
+def encontrar_arquivos(diretorio):  # Percorre recursivamente 'diretorio' usando os.walk e retorna lista de caminhos para arquivos que terminam com EXT_ALVO.
     lista = []
     for raiz, _, arquivos in os.walk(diretorio):
         for nome in arquivos:
