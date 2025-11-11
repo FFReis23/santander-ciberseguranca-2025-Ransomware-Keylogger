@@ -1,5 +1,5 @@
-from cryptography.fernet import Fernet #Importa a classe Fernet do pacote cryptography (submódulo fernet).
-import os #Fernet implementa criptografia simétrica pronta para uso.
+from cryptography.fernet import Fernet # Importa a classe Fernet do pacote cryptography (submódulo fernet).
+import os # Fernet implementa criptografia simétrica pronta para uso.
 
 def carregar_chave():
     return open("chave.key", "rb").read()
@@ -21,7 +21,7 @@ def encontrar_arquivos(diretorio):  # Percorre recursivamente 'diretorio' usando
                 lista.append(caminho)
     return lista
 
-def main():
+def main(): # Função principal : execução  
     chave = carregar_chave()
     arquivos = encontrar_arquivos("test_files")
     for arquivo in arquivos:
@@ -29,5 +29,5 @@ def main():
         print(f"Arquivo restaurado: {arquivo}")
     print("Todos os arquivos foram descriptografados com sucesso!")
 
-if __name__ == "__main__":
+if __name__ == "__main__": # Define o ponto de execução do script
     main()
