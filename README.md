@@ -21,7 +21,7 @@ maliciosos e então criptografa os arquivos da vítima, tornando-os inacessívei
 
 Segundo Singh et al. (2021),Keylogger é basicamente um tipo particular de spyware que pode gravar tudo o que você digita em seu teclado. Embora seja uma 
 ferramenta comum para as empresas, o departamento de tecnologia da informação do a corporação usa o software de registro de chaves para fins de solução de 
-problemas ou também é usado para ficar de olho sobre atividades suspeitas do funcionário
+problemas ou também é usado para ficar de olho sobre atividades suspeitas do funcionário.
 
 Aviso Ético e Legal
 
