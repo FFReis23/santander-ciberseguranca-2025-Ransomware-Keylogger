@@ -1,5 +1,4 @@
-from pynput import keyboard  # Biblioteca: pynput.keyboard
-# - fornece objetos e listeners para capturar eventos do teclado.
+from pynput import keyboard  # Biblioteca: pynput.keyboard # fornece objetos e listeners para capturar eventos do teclado.
 
 IGNORAR = {
     keyboard.Key.shift,
