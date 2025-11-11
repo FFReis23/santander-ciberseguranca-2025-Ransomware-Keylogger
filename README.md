@@ -54,5 +54,3 @@ Conclusão
 Este projeto demonstrou, em ambiente controlado, como funcionam as ameaças de ransomware e keylogger e como podemos aplicar defesas práticas. Ao experimentar com scripts em Python, ficou 
 claro que a combinação entre boas práticas técnicas, monitoramento ativo e educação de usuários é essencial para mitigar riscos digitais.
 
-Conclusão
-
